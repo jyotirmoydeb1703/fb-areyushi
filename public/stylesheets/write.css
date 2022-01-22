@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(6, 6, 29);
+    justify-content: center;
+    align-items: center;
+    font-family: Playfair Display;
+  }
+  
+  
+  .logo{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .main-box{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top:90px ;
+    margin-left: 200px;
+    border: whitesmoke solid ;
+    height: 350px;
+    width: 938px;
+    color: whitesmoke;
+  }
+
+  .text{
+      color: grey;
+  }
+
+  .textarea{
+      color: grey;
+  }

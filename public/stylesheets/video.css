@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(6, 6, 29);
+    justify-content: center;
+    align-items: center;
+    font-family: Playfair Display;
+  }
+  
+  h1{
+    color: whitesmoke;
+    padding-right: 30px;
+  }
+  
+  h2{
+    color: whitesmoke;
+    padding-right: 30px;
+  }
+  
+  h3{
+    color: whitesmoke;
+    padding-right: 30px;
+    font-size: 23px;
+    margin-top: 20px;
+  }
+
+  
+  .logo{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .video{
+    width: 50%;
+    margin: 0 auto; 
+  }
+
+
+

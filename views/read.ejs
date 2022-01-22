@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook</title>
+  <link rel='stylesheet' href='/stylesheets/write.css' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/jpg" href="/images/logo.jpg"/>
+</head>
+<body>
+    <body>
+        <link rel="icon" type="image/png" href="svg.png">
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+      </head>
+      <body>
+        <header class="text-gray-400 bg-gray-900 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <image class = "logo" src = "/images/logo.jpg"></image>
+                <span class="ml-3 text-xl">Facebook</span>
+              </a>
+              <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white" href = "/read" target="_blank">Posts</a>
+                <a class="mr-5 hover:text-white" href = "/write" target="_blank">Comments</a>
+                <a class="mr-5 hover:text-white">Videos</a>
+              </nav>
+              <button href = "table"class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"><a class = "view" href = "/read">View Comments </a>
+              </div>
+              </header>
+
+              <div id="top">
+                  <div id="overlay"></div>
+              </div>
+
+              <div id="container">
+                  <h2>Recent Comments</h2>
+                  <br />
+                <% data.forEach(function(comments){ %>
+                    <div class="card">
+                        <h3>
+                            <%= comments.commentname %>
+                        </h3>
+                        <br />
+                        <p>
+                            <%= comments.reviews %>
+                        </p>
+                        <br>
+                        <a href="/update/<%= comments._id %>"> <button id="update">Update</button></a>
+                        <a href="/delete/<%= comments._id %>"> <button id="delete">Delete</button></a>
+                    </div>
+                <% }) %>
+                </div>
+</body>
+</html>
