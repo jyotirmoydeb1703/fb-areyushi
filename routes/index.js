@@ -1,16 +1,13 @@
 var express = require('express');
 var router = express.Router();
-let UserModal = require('./users')
+let UserModel = require('./users')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
-router.get('/post', function(req, res, next) {
-  res.render('write');
-});
 
-router.get('/write', function(req, res, next){
+router.get('/post', function(req, res, next){
   res.render('write');
 });
 
@@ -19,7 +16,7 @@ router.get('/video', function(req, res, next) {
 });
 
 router.get('/reviews', function(req, res, next){
-  UserModal.find()
+  UserModel.find()
   .then(function(data){
     console.log(data)
     res.render('read', {data});
@@ -27,7 +24,7 @@ router.get('/reviews', function(req, res, next){
 });
 
 router.post('/submit', function(req, res){
-  UserModal.create({
+  UserModel.create({
     commentname: req.body.commentname,
     reviews: req.body.reviews
   })
@@ -35,7 +32,5 @@ router.post('/submit', function(req, res){
     res.redirect('/reviews')
   })
 })
-
-
 
 module.exports = router;

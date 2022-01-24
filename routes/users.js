@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://Chandana:cvml462ccl4*@mytasker.wknnc.mongodb.net
 
 let UserSchema = mongoose.Schema({
   commentname : String,
-  review : String
+  reviews : String
 })
 
 module.exports = mongoose.model('user', UserSchema)
